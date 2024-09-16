@@ -1,0 +1,18 @@
+name: crowdsecurity/whitelists
+description: "Whitelist events from trusted IP addresses"
+whitelist:
+  reason: "User selected ip ranges"
+{% if helpers.exists('OPNsense.crowdsec.general.crowdsec_whitelist_ips') and OPNsense.crowdsec.general.crowdsec_whitelist_ips != '' %}
+  ip:
+{% for whitelist_ip in OPNsense.crowdsec.whitelist_ips.split(',') %}
+    - "{{ whitelist_ip }}"
+{% endfor %}
+{% endif %}
+
+{% if helpers.exists('OPNsense.crowdsec.general.crowdsec_whitelist_cidrs') and OPNsense.crowdsec.general.crowdsec_whitelist_cidrs != '' %}
+  cidr:
+{% for whitelist_cidr in OPNsense.crowdsec.whitelist_cidrs.split(',') %}
+    - "{{ whitelist_cidr }}"
+{% endfor %}
+{% endif %}
+

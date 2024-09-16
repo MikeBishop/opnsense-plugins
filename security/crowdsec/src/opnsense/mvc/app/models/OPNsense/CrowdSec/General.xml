@@ -52,5 +52,26 @@
       <Required>Y</Required>
     </crowdsec_firewall_verbose>
 
+    <crowdsec_whitelist_ips type="NetworkField">
+      <default></default>
+      <Required>N</Required>
+      <ValidationMessage>Invalid IP address</ValidationMessage>
+      <NetMaskAllowed>N</NetMaskAllowed>
+      <FieldSeparator>,</FieldSeparator>
+      <WildcardEnabled>N</WildcardEnabled>
+      <AsList>Y</AsList>
+    </crowdsec_whitelist_ips>
+
+    <crowdsec_whitelist_cidrs type="NetworkField">
+      <default></default>
+      <Required>N</Required>
+      <ValidationMessage>Invalid IP network</ValidationMessage>
+      <NetMaskAllowed>Y</NetMaskAllowed>
+      <NetMaskRequired>Y</NetMaskRequired>
+      <FieldSeparator>,</FieldSeparator>
+      <WildcardEnabled>N</WildcardEnabled>
+      <AsList>Y</AsList>
+    </crowdsec_whitelist_cidrs>
+
   </items>
 </model>

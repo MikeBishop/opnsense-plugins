@@ -92,4 +92,23 @@
       for debugging.</help>
   </field>
 
+  <!-- crowdsec_whitelist_ips -->
+  <field>
+    <id>general.crowdsec_whitelist_ips</id>
+    <label>Whitelist IP addresses</label>
+    <type>textarea</type>
+    <help>List of IP addresses to whitelist. These addresses
+      will not be blocked by the firewall bouncer.</help>
+  </field>
+
+  <!-- crowdsec_whitelist_cidrs -->
+  <field>
+    <id>general.crowdsec_whitelist_cidrs</id>
+    <label>Whitelist networks</label>
+    <type>textarea</type>
+    <help>List of networks to whitelist. These addresses will not be blocked by
+      the firewall bouncer.</help>
+  </field>
+
+
 </form>
