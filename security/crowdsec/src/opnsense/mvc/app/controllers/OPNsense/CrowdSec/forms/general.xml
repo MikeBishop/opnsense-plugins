@@ -96,7 +96,7 @@
   <field>
     <id>general.crowdsec_whitelist_ips</id>
     <label>Whitelist IP addresses</label>
-    <type>textarea</type>
+    <type>textbox</type>
     <help>List of IP addresses to whitelist. These addresses
       will not be blocked by the firewall bouncer.</help>
   </field>
@@ -105,7 +105,7 @@
   <field>
     <id>general.crowdsec_whitelist_cidrs</id>
     <label>Whitelist networks</label>
-    <type>textarea</type>
+    <type>textbox</type>
     <help>List of networks to whitelist. These addresses will not be blocked by
       the firewall bouncer.</help>
   </field>
